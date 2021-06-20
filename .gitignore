@@ -1,0 +1,15 @@
+build/
+dist/
+lico_devblin.egg-info/
+lico.egg-info/
+*.pyc
+*.png
+pyvenv.cfg
+lib/
+bin/
+.vscode
+env/
+test.py
+__pycache__/
+__main__.py
+.env
