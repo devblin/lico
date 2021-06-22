@@ -11,5 +11,4 @@ bin/
 env/
 test.py
 __pycache__/
-__main__.py
 .env

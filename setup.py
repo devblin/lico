@@ -1,5 +1,6 @@
 import setuptools
 import re
+from lico_main import __version__, __original_name__, __test_name__
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -8,21 +9,13 @@ requirement_list = [r.strip() for r in open("requirements.txt", "r").readlines()
 project_dir = "lico_main"
 
 
-def get_attribute(attr, project):
-    result = re.search(
-        r'{}\s*=\s*[\'"]([^\'"]*)[\'"]'.format(attr),
-        open(project + "/__version.py").read(),
-    )
-    return result.group(1)
-
-
 setuptools.setup(
-    name="lico_main",
-    version=get_attribute("__version__", project_dir),
+    name=__test_name__,
+    version=__version__,
     install_requires=requirement_list,
     author="Deepanshu Dhruw",
     author_email="dhruwxl@gmail.com",
-    description="A cli to get lines-of-code for every language of a repo.",
+    description="A cli to get lines-of-code for every language of your github repo.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     entry_points={"console_scripts": ["lico=lico_main:main"]},
