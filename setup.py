@@ -8,7 +8,6 @@ with open("README.md", "r", encoding="utf-8") as fh:
 requirement_list = [r.strip() for r in open("requirements.txt", "r").readlines() if r]
 project_dir = "lico_main"
 
-
 setuptools.setup(
     name=__test_name__,
     version=__version__,
@@ -18,7 +17,7 @@ setuptools.setup(
     description="A cli to get lines-of-code for every language of your github repo.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    entry_points={"console_scripts": ["lico=lico_main:main"]},
+    entry_points={"console_scripts": ["lico=lico_main.__main__:main"]},
     url="https://github.com/devblin/lico",
     classifiers=[
         "Operating System :: POSIX",

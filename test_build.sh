@@ -5,9 +5,9 @@ rm -rf lico_devblin.egg-info
 rm -rf dist
 echo "UPGRADING BUILD..."
 python3 -m pip install --upgrade build
-echo "RUNNING BUILD"
+echo "RUNNING BUILD..."
 python3 -m build
-echo "INSTALLING AND UPGRADING TWINE"
+echo "INSTALLING AND UPGRADING TWINE..."
 python3 -m pip install --user --upgrade twine
-echo "UPLOADING IN TESTPYPI"
+echo "UPLOADING IN TESTPYPI..."
 python3 -m twine upload --repository testpypi dist/*
